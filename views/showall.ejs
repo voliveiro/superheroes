@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="http://localhost:3000/showheroes"> 
+        <h1>Superheroes </h1> 
+    </a>
+
+    <%let superheroes = characters[0]%> 
+    <% superheroes.forEach(element => {%>
+        <p> <%=element.name%> </p>
+        <ul> 
+            <% element["powers"].forEach((element) => { %> 
+                <li> 
+                <%=element%> 
+                </li>
+            <% }); %>
+        </ul> 
+
+    <% })%>
+
+    <a href="http://localhost:3000/showvillains"> 
+        <h1> Villains </h1>
+    </a>
+    <%let villains = characters[1]%> 
+    <% villains.forEach(element => {%>
+        <p> <%=element.name%> </p>
+        <ul> 
+            <% element["powers"].forEach((element) => { %> 
+                <li> 
+                <%=element%> 
+                </li>
+            <% }); %>
+        </ul> 
+        
+
+    <% })%>
+
+    <footer>
+
+        <a href="http://localhost:3000/index"> Display Raw Data</a>
+    </footer> 
+    
+</body>
+</html>

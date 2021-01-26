@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superheroes Shoes</title>
+</head>
+<body>
+
+    <% villains.forEach((element) => { %> 
+        <h1> 
+        <%=element.name%> 
+        </h1>
+        <ul> 
+
+            <% element["powers"].forEach((element) => { %> 
+                <li> 
+                <%=element%> 
+                </li>
+            <% }); %>
+        </ul> 
+    <% }); %>
+    
+    <a href="http://localhost:3000/showall"> Back to main page </a>
+</body>
+</html>
